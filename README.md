@@ -18,7 +18,7 @@ sudo apt-get install lshw
 
 3. Descargar el script automatizado del cliente
 ```shell
-wget https://github.com/jnightneko/lshw-server/blob/master/scripts/lshw-client.sh
+wget https://github.com/jnightneko/lshw-server/releases/download/v.1.0.0/lshw-client.sh
 ```
 
 4. Ejecutar el cliente con permisos
