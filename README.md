@@ -34,6 +34,7 @@ unzip lshw-server.zip
 # Con tar.xz
 tar -xJf nlshw-server.tar.xz
 
+# Ejecutar servidor
 sudo chmod +x lshw-server.sh
 ./lshw-server.sh
 ```
