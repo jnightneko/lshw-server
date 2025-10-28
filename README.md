@@ -16,12 +16,29 @@ sudo apt-get install pciutils
 sudo apt-get install lshw
 ```
 
-3. Descargar el script automatizado del cliente
+3. Descargar el script automatizado del cliente y el servidor
 ```shell
-wget https://github.com/jnightneko/lshw-server/releases/download/v.1.0.0/lshw-client.sh
+wget https://github.com/jnightneko/lshw-server/releases/download/v.1.0.1/lshw-client.sh
+
+# .zip
+wget https://github.com/jnightneko/lshw-server/releases/download/v.1.0.1/lshw-server.zip
+# .tar.xz
+wget https://github.com/jnightneko/lshw-server/releases/download/v.1.0.1/lshw-server.tar.xz
 ```
 
-4. Ejecutar el cliente con permisos
+4. Preparar el servidor
+```shell
+# Con unzip
+unzip lshw-server.zip
+
+# Con tar.xz
+tar -xJf nlshw-server.tar.xz
+
+sudo chmod +x lshw-server.sh
+./lshw-server.sh
+```
+
+5. Ejecutar el cliente con permisos
 ```shell
 sudo chmod +x lshw-client.sh
 
