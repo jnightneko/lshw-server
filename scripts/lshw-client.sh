@@ -19,13 +19,13 @@ FILE_CLIENT="client.json"
 
 # Guardar los dos ficheros con la información necesaria para
 # enviarlo al servidor principal (reportes)
-echo "[ .. ] Escanedando equipo..."
+echo -e "[ \e[35m..\e[0m ] Escanedando equipo..."
 
 echo "$DETALLE_HARDWARE \n\n $DETALLE_CPU" > $FILE_REPORT;
 echo "{\"address\": \"$HOST_ADDRESS\"}" > $FILE_CLIENT;
 
-echo "[ ok ] Fichero de reportes generados..."
-echo "[ .. ] Enviando reporte al servidor pirncioal: $LSHW_SERVER:$LSHW_PORT"
+echo -e "[ \e[32mok\e[0m ] Fichero de reportes generados..."
+echo -e "[ \e[33m..\e[0m ] Enviando reporte al servidor pirncipal: $LSHW_SERVER:$LSHW_PORT"
 
 
 #curl -X POST -F "report=@./$FILE_REPORT" -F "client=@./$FILE_CLIENT" $LSHW_ADDRESS
@@ -37,10 +37,10 @@ curl -X POST \
 
 
 echo ""
-echo "[ ok ] Reporte enviada ($LSHW_ADDRESS)..."
-echo "[ .. ] Eliminado ficheros temporales"
+echo -e "[ \e[32mok\e[0m ] Reporte enviada ($LSHW_ADDRESS)..."
+echo -e "[ \e[33m..\e[0m ] Eliminado ficheros temporales"
 
 rm ./$FILE_REPORT
 rm ./$FILE_CLIENT
 
-echo "[ ok ] Reporte finalizada..."
+echo -e "[ \e[32mok\e[0m ] Reporte finalizada..."
